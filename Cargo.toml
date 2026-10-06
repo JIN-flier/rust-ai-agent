@@ -3,13 +3,20 @@ name = "rust-ai-agent"
 version = "0.1.0"
 edition = "2024"
 
+[[example]]
+name = "stream_example"
+path = "examples/stream_example.rs"
+
 [dependencies]
 anyhow = "1.0.104"
 async-openai = { version = "0.42.1", features = ["chat-completion"] }
+async-stream = "0.3.6"
+backon = "1.6.0"
 dotenvy = "0.15.7"
+futures = "0.3.34"
 schemars = "1.2.2"
 serde = { version = "1.0.229", features = ["derive"] }
 serde_json = "1.0.151"
-tokio = { version = "1.53.2", features = ["full"]}
+tokio = { version = "1.53.2", features = ["full"] }
 tracing = "0.1.44"
 tracing-subscriber = "0.3.23"
